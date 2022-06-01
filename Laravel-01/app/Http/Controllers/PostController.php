@@ -11,6 +11,8 @@ use App\Tag;
 use Purifier;
 use Image;
 use Storage;
+use App\post_tags;
+
 
 class PostController extends Controller
 {
@@ -53,34 +55,48 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {   
+        // dd(count($request->tags));
         $this->validate($request,array(
             'title'=> 'required|max:255',
             'slug'=>'required|alpha_dash|min:5|max:255|unique:posts,slug',
             'category_id'=>'required|integer',
             'body'=>'required',
             'image'=>'sometimes|image'
-            ));
+        ));
         $post= new Post;
         $post->title = $request->title;
         $post->slug = $request->slug;
         $post->category_id = $request->category_id;
-        $post->body = Purifier::clean($request->body);
+        // $post->body = Purifier::clean($request->body);
+        $post->body = $request->body;
         if ($request->hasFile('image')) {
             $image = $request->file('image');
             $filename = time() . '.' .$image->getClientOriginalExtension();
             $location = public_path('images/'.$filename);
-            //dd(is_writable($location . $filename));
+            // dd(is_writable($location . $filename));
             Image::make($image)->resize(400,400)->save($location);
             $post->images = $filename;
         }
 
         $post->save();
-        //$post->tags()->sync($request->tags,false);
+        // if($request->tags){
+        //     $tags = array();
+        //     $tags = $request->tags;
+        //     for($i=0; $i<count($tags);$i++){
+        //         $post_tags = new post_tags();
+        //         $post_tags->post_id = $post->id;
+        //         $post_tags->tag_id = $tags[$i];
+        //         $post_tags->save();
+        //     }
+            
+        // }
+        $post->tags()->sync($request->tags,false);
         if(isset($request->tags)) {
             $post->tags()->sync($request->tags,false);
         } else{
             $post->tags()->sync(array());   
         }
+
         Session::flash('success','The Post is Successfully Saved');
         return redirect()->route('posts.show',$post->id);
     }
