@@ -1,5 +1,12 @@
 # Laravel CRM
 
+## Requirements 
+ + Linux/Unix, WAMP/XAMP or MacOS environment
+ + PHP >= 7.3
+ + MySQL >= 5.7.8
+ + Web server (Apache, Nginx or integrated PHP web server for testing)
+ + Composer 2.0+
+
 ## Installation
 
 Install PHP dependencies:
