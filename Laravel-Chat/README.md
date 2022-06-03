@@ -67,6 +67,10 @@ Go to http://127.0.0.1:8000/, register a couple of users and start chatting!
 
 Owned by [Pusher](https://pusher.com).
 
+## Demo Link
+
+http://chat.nationalsociety.in/
+
 ## License
 
 PusherSwift is released under the MIT license. See [LICENSE](https://github.com/pusher/laravel-chat/blob/master/LICENSE.md) for details.
