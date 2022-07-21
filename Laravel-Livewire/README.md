@@ -49,11 +49,6 @@ You will need PHP, Composer and Node.js. For MacOS I recommend installing them w
 Go to http://127.0.0.1:8000/, register a couple of users and start chatting!
 
 
-
-## Demo Link
-
-http://chat.nationalsociety.in/
-
 ## License
 
 PusherSwift is released under the MIT license. See [LICENSE](https://github.com/pusher/laravel-chat/blob/master/LICENSE.md) for details.
