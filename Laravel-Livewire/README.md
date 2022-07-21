@@ -11,7 +11,7 @@
 
 ## About The Project
 
-The project is based on real time chat application.
+The project is based on real time chat application using Laravel and Livewire.
 
 ### About us
 
