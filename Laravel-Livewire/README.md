@@ -54,9 +54,6 @@ Go to http://127.0.0.1:8000/, register a couple of users and start chatting!
 - Want so ask a Pusher a question? [Contact support here](https://support.pusher.com/hc/).
 - If you want to raise an issue with our PHP SDK, [do it here](https://github.com/pusher/pusher-http-php).
  
-## Credits
-
-Owned by [Pusher](https://pusher.com).
 
 ## Demo Link
 
