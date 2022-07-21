@@ -48,12 +48,7 @@ You will need PHP, Composer and Node.js. For MacOS I recommend installing them w
 
 Go to http://127.0.0.1:8000/, register a couple of users and start chatting!
 
-<!-- CONTACT -->
-## Contact
 
-- Want so ask a Pusher a question? [Contact support here](https://support.pusher.com/hc/).
-- If you want to raise an issue with our PHP SDK, [do it here](https://github.com/pusher/pusher-http-php).
- 
 
 ## Demo Link
 
